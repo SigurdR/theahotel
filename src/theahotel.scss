@@ -6,11 +6,79 @@
 // Be sure that you only ever include this mixin once!
 @include mat-core();
 
+
+$thea-primary: (
+    50 : #f6fbfb,
+    100 : #e8f5f4,
+    200 : #d9efed,
+    300 : #c9e9e6,
+    400 : #bee4e0,
+    500 : #b2dfdb,
+    600 : #abdbd7,
+    700 : #a2d7d2,
+    800 : #99d2cd,
+    900 : #8acac4,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #f6fffe,
+    A700 : #dcfffc,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$thea-accent: (
+    50 : #fffefb,
+    100 : #fffdf6,
+    200 : #fffcf0,
+    300 : #fffaea,
+    400 : #fff9e6,
+    500 : #fff8e1,
+    600 : #fff7dd,
+    700 : #fff6d9,
+    800 : #fff5d5,
+    900 : #fff3cd,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #ffffff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$theahotel-primary: mat-palette($mat-teal, 200);
-$theahotel-accent:  mat-palette($mat-teal, 50);
+$theahotel-primary: mat-palette($thea-primary, 700, 300, 900);
+$theahotel-accent:  mat-palette($thea-accent, 500, 400, 700);
 
 // The warn palette is optional (defaults to red).
 $theahotel-warn:    mat-palette($mat-red);
@@ -18,11 +86,24 @@ $theahotel-warn:    mat-palette($mat-red);
 // Create the theme object (a Sass map containing all of the palettes).
 $theahotel: mat-light-theme($theahotel-primary, $theahotel-accent, $theahotel-warn);
 
+@import './app/navigation/navtabs/navtabs.component-theme.scss';
+
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($theahotel);
 
-.navtabs-container {
-    background-color: mat-color($theahotel-accent)
+// Navtabs component scss file
+@include navtabs-component-theme($theahotel);
+
+
+
+
+// All our styles will go here
+.mat-list-option:hover,
+.mat-list-option.mat-list-item-focus,
+.mat-nav-list .mat-list-item:hover,
+.mat-nav-list .mat-list-item.mat-list-item-focus {
+    background-color: mat-color($theahotel-primary, 300);
+    color: mat-color($theahotel-primary, 900)
 }
