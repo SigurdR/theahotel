@@ -10,7 +10,7 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $theahotel-primary: mat-palette($mat-teal, 200);
-$theahotel-accent:  mat-palette($mat-teal, 50);
+$theahotel-accent:  mat-palette($mat-teal, 100);
 
 // The warn palette is optional (defaults to red).
 $theahotel-warn:    mat-palette($mat-red);
