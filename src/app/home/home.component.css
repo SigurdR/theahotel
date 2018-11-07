@@ -35,7 +35,7 @@
   position: relative;
   width: 100%;
   text-align: center;
-  transform: transtate(-50%, -50%);
+  transform: translate(-50%, 50%);
 }
 
 .thailand h3 {
@@ -48,12 +48,15 @@
   font-weight: 500;
   text-transform: uppercase;
   font-family: Rubik, sans-serif;
+  top: 50%;
+  left: 50%;
+  position: relative;
 }
 
 
 /* @media all and (max-width: 768px) {
   .hero-container {
-    height: 90vh;
+    height: 100vh;
   }
 } */
 
