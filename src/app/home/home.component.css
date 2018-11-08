@@ -6,7 +6,6 @@
 
 .book-now-container{
   padding: 35px 115px;
-
 }
 
 .book-now-button {
@@ -27,29 +26,32 @@
   color: white;
 }
 
-.header-container .mat-display-1 {
+/* .header-container .mat-display-1 {
   margin: 10px;
-}
+} */
 
 .thailand {
   position: relative;
   width: 100%;
   text-align: center;
-  transform: translate(-50%, 50%);
+  /* height: 200px; */
+  transform: translate(0%, 50%);
 }
 
 .thailand h3 {
   -webkit-text-fill-color: transparent;
-  background: url(/assets/images/thailand_text_background.jpg)repeat;
+  background: url(/assets/images/thailand_text_background.jpg);
+  width: 100%;
   background-clip: text;
-  font-stretch: normal;
-  font-size: 200px;
+  /* font-stretch: normal; */
+  font-size: 1000%;
   letter-spacing: 0.09em;
-  font-weight: 500;
+  /* font-weight: 500; */
   text-transform: uppercase;
   font-family: Rubik, sans-serif;
-  top: 50%;
-  left: 50%;
+  /* top: 50%; */
+  /* left: 50%; */
+  /* height: 200px; */
   position: relative;
 }
 
@@ -65,18 +67,24 @@
   margin: 15px;
 }
 
-.rooms-home-display mat-card {
+/* .rooms-home-display mat-card {
   position: relative;
   text-align: center;
   height: 600px;
-}
+} */
 
 .room-suites {
+  position: relative;
+  text-align: center;
+  height: 600px;
   background: url(/assets/images/beach-houses.jpg)center center no-repeat;
   background-size: cover;
 }
 
 .beach-houses {
+  position: relative;
+  text-align: center;
+  height: 600px;
   background: url(/assets/images/beach-houses.jpg)center center no-repeat;
   background-size: cover;
 }
@@ -85,14 +93,71 @@
   height: 600px;
 } */
 
-.rooms-home-display mat-card-header h2 {
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 34px;
-  line-height: 43px;
+ .room-suites mat-card-header {
+  position: relative;
+  top: 20%;
+  /* left: 45%;
+  transform: translate(0%, 200%); */
+  width: 100%;
+  text-align: center;
+  height: 55px;
+  background: rgba(255,248,225,0.6); 
 }
 
-.rooms-home-display mat-card-header {
+.room-suites mat-card-header h2 {
+  text-transform: uppercase;
+  text-align: center;
+  /* font-weight: 400;
+  font-size: 34px;
+  line-height: 43px; */
+}
+
+.room-suites mat-card-actions {
+  position: relative;
+  top:60%;
+  /* top: 75%;
+  left: 55%; */
+  /* transform: translate(0%, 800%) */
+}
+
+.room-suites mat-card-actions button {
+  max-width: 141px;
+  max-height: 40px;
+}
+
+.beach-houses mat-card-header {
+  position: relative;
+  top: 20%;
+  /* left: 50%;
+  transform: translate(0%, 200%); */
+  width: 100%;
+  text-align: center;
+  height: 55px;
+  background: rgba(255,248,225,0.6); 
+}
+
+.beach-houses mat-card-header h2 {
+  text-transform: uppercase;
+  text-align: center;
+  /* font-weight: 400;
+  font-size: 34px;
+  line-height: 43px; */
+}
+
+.beach-houses mat-card-actions {
+  position: relative;
+  top: 60%;
+  /* left: 55%;
+  transform: translate(0%, 800%) */
+}
+
+.beach-houses mat-card-actions button {
+  max-width: 141px;
+  max-height: 40px;
+}
+
+
+/* .rooms-home-display mat-card-header {
   position: absolute;
   top: 25%;
   left: 50%;
@@ -101,19 +166,28 @@
   text-align: center;
   height: 55px;
   background: rgba(255,248,225,.6); 
-}
+}*/
 
-.rooms-home-display mat-card button {
+/* .rooms-home-display mat-card-header h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 43px;
+} */
+
+
+
+/* .rooms-home-display mat-card button {
   min-width: 141px;
   min-height: 40px;
-}
+} */
 
-.rooms-home-display mat-card-actions {
+/* .rooms-home-display mat-card-actions {
   position: absolute;
   top: 75%;
   left: 55%;
   transform: translate(-50%, -50%)
-}
+} */
 
 
 /* @media all and (max-width: 768px) {
@@ -124,11 +198,18 @@
 
 @media all and (max-width: 599px) {
   .header-container .mat-display-1 {
+    margin: 10px;
     font-size: 1.1rem;
     line-height: 1.1;
   }
 
   .header-container .mat-display-4 {
+    color: white;
+    font-size: 3rem;
+    line-height: 1.1;
+  }
+
+  .thailand h3 {
     font-size: 3rem;
     line-height: 1.1;
   }
